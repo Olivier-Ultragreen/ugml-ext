@@ -10,6 +10,7 @@ Class UGServicesCSSInjector extends UGServices {
 		header('Content-type: text/css');
 		$aFiles = explode(',',$stylesheet);
 		foreach($aFiles as $file) {
+			$file = basename($file);
 			$sOutput .= getTpl("../styles/$file");
 		}
 		
